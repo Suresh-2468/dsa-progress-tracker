@@ -435,3 +435,560 @@ footer{
     }
 
 }
+/* Stats Section */
+
+.stats-section{
+    margin-top: 80px;
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 20px;
+}
+
+.stat-card{
+    background: #151c35;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.stat-card:hover{
+    transform: translateY(-5px);
+}
+
+.stat-card h3{
+    color: #94a3b8;
+}
+
+.stat-card p{
+    margin-top: 15px;
+
+    font-size: 2rem;
+
+    font-weight: bold;
+}
+
+.total-card{
+    border-left: 5px solid #8b5cf6;
+}
+
+.easy-card{
+    border-left: 5px solid #22c55e;
+}
+
+.medium-card{
+    border-left: 5px solid #f59e0b;
+}
+
+.hard-card{
+    border-left: 5px solid #ef4444;
+}
+
+/* Daily Goal */
+
+.daily-goal{
+    margin-top: 80px;
+}
+
+.goal-card{
+    background: #151c35;
+
+    padding: 35px;
+
+    border-radius: 20px;
+}
+
+.goal-card p{
+    margin-top: 15px;
+
+    color: #94a3b8;
+}
+
+.goal-progress{
+    width: 100%;
+
+    height: 14px;
+
+    background: #1e293b;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+}
+
+.goal-fill{
+    width: 60%;
+
+    height: 100%;
+
+    background: #8b5cf6;
+}
+
+.goal-card span{
+    display: block;
+
+    margin-top: 15px;
+
+    color: #cbd5e1;
+}
+
+/* Platform Section */
+
+.platform-section{
+    margin-top: 90px;
+}
+
+.platform-section h2{
+    margin-bottom: 30px;
+
+    color: #8b5cf6;
+}
+
+.platform-cards{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+
+    gap: 20px;
+}
+
+.platform-card{
+    padding: 30px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+.platform-card:hover{
+    transform: translateY(-5px);
+}
+
+.leetcode{
+    background: rgba(249,115,22,0.15);
+
+    border: 1px solid rgba(249,115,22,0.3);
+}
+
+.gfg{
+    background: rgba(34,197,94,0.15);
+
+    border: 1px solid rgba(34,197,94,0.3);
+}
+
+.codechef{
+    background: rgba(139,92,246,0.15);
+
+    border: 1px solid rgba(139,92,246,0.3);
+}
+
+.platform-card p{
+    margin-top: 12px;
+
+    color: #cbd5e1;
+}
+
+/* Recent Activity */
+
+.recent-section{
+    margin-top: 90px;
+}
+
+.recent-section h2{
+    margin-bottom: 30px;
+
+    color: #8b5cf6;
+}
+
+.activity-card{
+    background: #151c35;
+
+    padding: 20px;
+
+    border-radius: 16px;
+
+    margin-bottom: 15px;
+
+    transition: 0.3s;
+}
+
+.activity-card:hover{
+    transform: translateX(5px);
+}
+
+.activity-card p{
+    color: #e2e8f0;
+}
+/* Topics Section */
+
+.topics-section{
+    margin-top: 100px;
+}
+
+.section-title{
+    margin-bottom: 40px;
+}
+
+.section-title h2{
+    font-size: 2.2rem;
+
+    color: #8b5cf6;
+}
+
+.section-title p{
+    margin-top: 10px;
+
+    color: #94a3b8;
+}
+
+/* Topics Grid */
+
+.topics-grid{
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+
+    gap: 25px;
+}
+
+/* Topic Card */
+
+.topic-card{
+    background: #151c35;
+
+    padding: 28px;
+
+    border-radius: 24px;
+
+    border: 1px solid rgba(255,255,255,0.05);
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+.topic-card:hover{
+    transform: translateY(-5px);
+
+    border-color: rgba(139,92,246,0.4);
+}
+
+/* Top */
+
+.topic-top{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.topic-top h3{
+    font-size: 1.5rem;
+}
+
+.topic-top span{
+    background: rgba(139,92,246,0.15);
+
+    color: #8b5cf6;
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+/* Description */
+
+.topic-card p{
+    margin-top: 18px;
+
+    color: #94a3b8;
+
+    line-height: 1.6;
+}
+
+/* Progress Bar */
+
+.topic-progress{
+    width: 100%;
+
+    height: 12px;
+
+    background: #0f172a;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+}
+
+.progress-fill{
+    height: 100%;
+}
+
+/* Different Colors */
+
+.arrays-fill{
+    width: 20%;
+
+    background: #22c55e;
+}
+
+.strings-fill{
+    width: 10%;
+
+    background: #3b82f6;
+}
+
+.linked-fill{
+    width: 0%;
+
+    background: #f59e0b;
+}
+
+.tree-fill{
+    width: 0%;
+
+    background: #8b5cf6;
+}
+
+.graph-fill{
+    width: 0%;
+
+    background: #ef4444;
+}
+
+.dp-fill{
+    width: 0%;
+
+    background: #ec4899;
+}
+
+/* Footer */
+
+.topic-footer{
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 18px;
+
+    color: #cbd5e1;
+
+    font-size: 14px;
+}
+/* Roadmap Popup */
+
+.roadmap-popup{
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.6);
+
+    backdrop-filter: blur(10px);
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
+    z-index: 2000;
+}
+
+/* Active Popup */
+
+.roadmap-popup.active{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Popup Content */
+
+.popup-content{
+    width: 90%;
+    max-width: 700px;
+
+    background: #151c35;
+
+    border-radius: 24px;
+
+    padding: 35px;
+}
+
+/* Header */
+
+.popup-header{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 30px;
+}
+
+.popup-header button{
+    background: transparent;
+
+    border: none;
+
+    color: white;
+
+    font-size: 1.5rem;
+
+    cursor: pointer;
+}
+
+/* Roadmap Boxes */
+
+.roadmap-box{
+    margin-bottom: 30px;
+}
+
+.roadmap-box h3{
+    margin-bottom: 18px;
+}
+
+.roadmap-box ul{
+    list-style: none;
+}
+
+.roadmap-box li{
+    background: #0f172a;
+
+    padding: 14px;
+
+    border-radius: 12px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+}
+
+.roadmap-box li:hover{
+    background: #1e293b;
+
+    transform: translateX(5px);
+}
+
+/* Problem Item */
+
+.roadmap-box li{
+    background: #0f172a;
+
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    margin-bottom: 12px;
+
+    transition: 0.3s;
+
+    list-style: none;
+}
+
+/* Left Side */
+
+.problem-left{
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+/* Problem Text */
+
+.problem-left span{
+    text-decoration: none;
+
+    border: none;
+}
+
+/* Solve Circle */
+
+.solve-circle{
+    width: 24px;
+
+    height: 24px;
+
+    border: 2px solid #475569;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+/* Check Icon */
+
+.solve-circle i{
+    font-size: 14px;
+
+    opacity: 0;
+
+    transition: 0.3s;
+}
+
+/* Solved State */
+
+.solved{
+    background: rgba(34,197,94,0.15);
+
+    border: 1px solid #22c55e;
+}
+
+/* Active Circle */
+
+.solved .solve-circle{
+    background: #f97316;
+
+    border-color: #f97316;
+}
+
+/* Show Tick */
+
+.solved .solve-circle i{
+    opacity: 1;
+
+    color: white;
+}
+
+/* Solved Text */
+
+.solved span{
+    color: #e2e8f0 !important;
+
+    text-decoration: none !important;
+
+    border: none !important;
+}
