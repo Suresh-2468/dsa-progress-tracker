@@ -44,7 +44,120 @@ const roadmapData = {
             "Sliding Window Maximum"
         ]
 
-    }
+    },
+
+    strings: {
+
+    title: "Strings Roadmap",
+
+    beginner: [
+        "Valid Anagram",
+        "Longest Common Prefix",
+        "Valid Palindrome"
+    ],
+
+    intermediate: [
+        "Group Anagrams",
+        "Longest Substring Without Repeating Characters"
+    ],
+
+    advanced: [
+        "Minimum Window Substring",
+        "Longest Repeating Character Replacement"
+    ]
+
+  },
+  linkedlist: {
+
+    title: "Linked List Roadmap",
+
+    beginner: [
+        "Reverse Linked List",
+        "Linked List Cycle",
+        "Merge Two Sorted Lists"
+    ],
+
+    intermediate: [
+        "Remove Nth Node From End",
+        "Reorder List"
+    ],
+
+    advanced: [
+        "Copy List With Random Pointer",
+        "LRU Cache"
+    ]
+
+},
+  trees: {
+
+    title: "Trees Roadmap",
+
+    beginner: [
+        "Binary Tree Inorder Traversal",
+        "Maximum Depth of Binary Tree",
+        "Same Tree"
+    ],
+
+    intermediate: [
+        "Balanced Binary Tree",
+        "Diameter of Binary Tree",
+        "Binary Tree Level Order Traversal"
+    ],
+
+    advanced: [
+        "Lowest Common Ancestor",
+        "Serialize and Deserialize Binary Tree"
+    ]
+
+},
+
+graphs: {
+
+    title: "Graphs Roadmap",
+
+    beginner: [
+        "Number of Islands",
+        "Find if Path Exists in Graph",
+        "Flood Fill"
+    ],
+
+    intermediate: [
+        "Clone Graph",
+        "Course Schedule",
+        "Rotting Oranges"
+    ],
+
+    advanced: [
+        "Network Delay Time",
+        "Word Ladder",
+        "Alien Dictionary"
+    ]
+
+},
+
+dp: {
+
+    title: "Dynamic Programming Roadmap",
+
+    beginner: [
+        "Climbing Stairs",
+        "House Robber",
+        "Min Cost Climbing Stairs"
+    ],
+
+    intermediate: [
+        "Coin Change",
+        "Longest Increasing Subsequence",
+        "Partition Equal Subset Sum"
+    ],
+
+    advanced: [
+        "Edit Distance",
+        "Longest Common Subsequence",
+        "Burst Balloons"
+    ]
+
+}
 
 };
 
