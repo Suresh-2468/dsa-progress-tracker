@@ -56,37 +56,38 @@
 
             </div>
 
-            <!-- Dropdown Menu -->
+    <!-- Dropdown Menu -->
 
-        <div class="dropdown-menu">
+    <!-- Dropdown Menu -->
 
-    <a href="#">
+<div class="dropdown-menu">
+
+    <a href="#home">
         <i class="ri-home-5-line"></i>
         Home
     </a>
-       <a href="#">
+
+    <a href="#profile">
         <i class="ri-user-line"></i>
         My Profile
     </a>
-    <a href="#">
+
+    <a href="#platforms">
         <i class="ri-terminal-box-line"></i>
         Coding Platforms
     </a>
 
-
-    <a href="#">
+    <a href="#activity">
         <i class="ri-check-double-line"></i>
         Solved Problems
     </a>
 
-    <a href="#">
+    <a href="#roadmap">
         <i class="ri-code-box-line"></i>
         Topics
     </a>
 
- 
-
-    <a href="#">
+    <a href="#settings">
         <i class="ri-settings-3-line"></i>
         Settings
     </a>
@@ -101,7 +102,7 @@
 
     <!-- Hero Section -->
 
-    <section class="hero">
+<section class="hero" id="home">
 
         <h1>
             Track your DSA progress in one place.
@@ -123,11 +124,11 @@
 
         </div>
 
-    </section>
+</section>
 
     <!-- Topics Roadmap Section -->
 
-<section class="topics-section">
+<section class="topics-section" id="roadmap">
 
     <div class="section-title">
 
@@ -332,76 +333,10 @@
     </div>
 
 </div>
+</section>
 
 
-<!-- Roadmap Popup -->
-
-<div class="roadmap-popup" id="roadmapPopup">
-
-    <div class="popup-content">
-
-        <!-- Header -->
-
-        <div class="popup-header">
-
-            <h2>Arrays Roadmap</h2>
-
-            <button id="closePopup">
-                ✕
-            </button>
-
-        </div>
-
-        <!-- Beginner -->
-
-        <div class="roadmap-box">
-
-            <h3>🟢 Beginner</h3>
-
-            <ul>
-
-                <li>Two Sum</li>
-                <li>Maximum Subarray</li>
-                <li>Best Time To Buy & Sell Stock</li>
-
-            </ul>
-
-        </div>
-
-        <!-- Intermediate -->
-
-        <div class="roadmap-box">
-
-            <h3>🟡 Intermediate</h3>
-
-            <ul>
-
-                <li>Product of Array Except Self</li>
-                <li>Merge Intervals</li>
-
-            </ul>
-
-        </div>
-
-        <!-- Advanced -->
-
-        <div class="roadmap-box">
-
-            <h3>🔴 Advanced</h3>
-
-            <ul>
-
-                <li>Trapping Rain Water</li>
-                <li>Sliding Window Maximum</li>
-
-            </ul>
-
-        </div>
-
-    </div>
-
-</div>
-    
+<div class="dashboard-container">
     <!-- Stats Overview -->
 
     <section class="stats-section">
@@ -409,7 +344,7 @@
          <div class="stat-card total-card">
 
             <h3>Total Solved</h3>
-            <p>156</p>
+            <p id="totalSolved">0</p>
  
         </div>
 
@@ -438,7 +373,7 @@
 
     <!-- Daily Goal -->
 
-<section class="daily-goal">
+    <section class="daily-goal">
 
     <div class="goal-card">
 
@@ -458,11 +393,11 @@
 
     </div>
 
-</section>
+    </section>
 
-        <!-- Coding Platforms -->
+    <!-- Coding Platforms -->
 
-<section class="platform-section">
+    <section class="platform-section" id="platforms">
 
     <h2>Coding Platforms</h2>
 
@@ -491,11 +426,11 @@
 
     </div>
 
-</section>
+    </section>
 
-<!-- Recent Activity -->
+    <!-- Recent Activity -->
 
-<section class="recent-section">
+    <section class="recent-section" id="activity">
 
     <h2>Recent Activity</h2>
 
@@ -523,7 +458,7 @@
 
     </div>
 
-</section>
+    </section>
 
     <!-- Features -->
 
@@ -575,7 +510,7 @@
 
     <!-- Progress Preview -->
 
-    <section class="progress-section">
+    <section class="progress-section" id="progress">
 
         <h2>Topic Progress</h2>
 
@@ -619,6 +554,17 @@
         </div>
 
     </section>
+</div>
+
+<!-- Roadmap Popup -->
+
+<div class="roadmap-popup" id="roadmapPopup">
+
+    <div class="popup-content">
+
+    </div>
+
+</div>
 
     <!-- Footer -->
 

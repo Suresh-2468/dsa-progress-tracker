@@ -1,22 +1,28 @@
+// =============================
+// Profile Dropdown
+// =============================
+
 const profileDropdown = document.getElementById("profileDropdown");
 
-profileDropdown.addEventListener("click", () => {
-    profileDropdown.classList.toggle("active");
-});
+if (profileDropdown) {
+
+    profileDropdown.addEventListener("click", () => {
+
+        profileDropdown.classList.toggle("active");
+
+    });
+
+}
 
 // =============================
-// Select Topic Cards
+// Select Elements
 // =============================
 
-// Select all topic cards
 const topicCards = document.querySelectorAll(".topic-card");
 
-// Popup container
 const roadmapPopup = document.getElementById("roadmapPopup");
 
-// Popup content
 const popupContent = document.querySelector(".popup-content");
-
 
 // =============================
 // Roadmap Data
@@ -25,163 +31,135 @@ const popupContent = document.querySelector(".popup-content");
 const roadmapData = {
 
     arrays: {
-
         title: "Arrays Roadmap",
-
         beginner: [
             "Two Sum",
             "Maximum Subarray",
             "Best Time To Buy & Sell Stock"
         ],
-
         intermediate: [
             "Product of Array Except Self",
             "Merge Intervals"
         ],
-
         advanced: [
             "Trapping Rain Water",
             "Sliding Window Maximum"
         ]
-
     },
 
     strings: {
+        title: "Strings Roadmap",
+        beginner: [
+            "Valid Anagram",
+            "Longest Common Prefix",
+            "Valid Palindrome"
+        ],
+        intermediate: [
+            "Group Anagrams",
+            "Longest Substring Without Repeating Characters"
+        ],
+        advanced: [
+            "Minimum Window Substring",
+            "Longest Repeating Character Replacement"
+        ]
+    },
 
-    title: "Strings Roadmap",
+    linkedlist: {
+        title: "Linked List Roadmap",
+        beginner: [
+            "Reverse Linked List",
+            "Linked List Cycle",
+            "Merge Two Sorted Lists"
+        ],
+        intermediate: [
+            "Remove Nth Node From End",
+            "Reorder List"
+        ],
+        advanced: [
+            "Copy List With Random Pointer",
+            "LRU Cache"
+        ]
+    },
 
-    beginner: [
-        "Valid Anagram",
-        "Longest Common Prefix",
-        "Valid Palindrome"
-    ],
+    trees: {
+        title: "Trees Roadmap",
+        beginner: [
+            "Binary Tree Inorder Traversal",
+            "Maximum Depth of Binary Tree",
+            "Same Tree"
+        ],
+        intermediate: [
+            "Balanced Binary Tree",
+            "Diameter of Binary Tree",
+            "Binary Tree Level Order Traversal"
+        ],
+        advanced: [
+            "Lowest Common Ancestor",
+            "Serialize and Deserialize Binary Tree"
+        ]
+    },
 
-    intermediate: [
-        "Group Anagrams",
-        "Longest Substring Without Repeating Characters"
-    ],
+    graphs: {
+        title: "Graphs Roadmap",
+        beginner: [
+            "Number of Islands",
+            "Find if Path Exists in Graph",
+            "Flood Fill"
+        ],
+        intermediate: [
+            "Clone Graph",
+            "Course Schedule",
+            "Rotting Oranges"
+        ],
+        advanced: [
+            "Network Delay Time",
+            "Word Ladder",
+            "Alien Dictionary"
+        ]
+    },
 
-    advanced: [
-        "Minimum Window Substring",
-        "Longest Repeating Character Replacement"
-    ]
-
-  },
-  linkedlist: {
-
-    title: "Linked List Roadmap",
-
-    beginner: [
-        "Reverse Linked List",
-        "Linked List Cycle",
-        "Merge Two Sorted Lists"
-    ],
-
-    intermediate: [
-        "Remove Nth Node From End",
-        "Reorder List"
-    ],
-
-    advanced: [
-        "Copy List With Random Pointer",
-        "LRU Cache"
-    ]
-
-},
-  trees: {
-
-    title: "Trees Roadmap",
-
-    beginner: [
-        "Binary Tree Inorder Traversal",
-        "Maximum Depth of Binary Tree",
-        "Same Tree"
-    ],
-
-    intermediate: [
-        "Balanced Binary Tree",
-        "Diameter of Binary Tree",
-        "Binary Tree Level Order Traversal"
-    ],
-
-    advanced: [
-        "Lowest Common Ancestor",
-        "Serialize and Deserialize Binary Tree"
-    ]
-
-},
-
-graphs: {
-
-    title: "Graphs Roadmap",
-
-    beginner: [
-        "Number of Islands",
-        "Find if Path Exists in Graph",
-        "Flood Fill"
-    ],
-
-    intermediate: [
-        "Clone Graph",
-        "Course Schedule",
-        "Rotting Oranges"
-    ],
-
-    advanced: [
-        "Network Delay Time",
-        "Word Ladder",
-        "Alien Dictionary"
-    ]
-
-},
-
-dp: {
-
-    title: "Dynamic Programming Roadmap",
-
-    beginner: [
-        "Climbing Stairs",
-        "House Robber",
-        "Min Cost Climbing Stairs"
-    ],
-
-    intermediate: [
-        "Coin Change",
-        "Longest Increasing Subsequence",
-        "Partition Equal Subset Sum"
-    ],
-
-    advanced: [
-        "Edit Distance",
-        "Longest Common Subsequence",
-        "Burst Balloons"
-    ]
-
-}
+    dp: {
+        title: "Dynamic Programming Roadmap",
+        beginner: [
+            "Climbing Stairs",
+            "House Robber",
+            "Min Cost Climbing Stairs"
+        ],
+        intermediate: [
+            "Coin Change",
+            "Longest Increasing Subsequence",
+            "Partition Equal Subset Sum"
+        ],
+        advanced: [
+            "Edit Distance",
+            "Longest Common Subsequence",
+            "Burst Balloons"
+        ]
+    }
 
 };
-
 
 // =============================
 // Dynamic Popup System
 // =============================
 
-// Loop through all topic cards
 topicCards.forEach((card) => {
 
-    // Add click event to each card
     card.addEventListener("click", () => {
 
-        // Get topic name from data-topic
         const topic = card.dataset.topic;
 
-        // Get roadmap data
         const data = roadmapData[topic];
 
-        // Update popup dynamically
-        popupContent.innerHTML = `
+        if (!data) {
 
-            <!-- Popup Header -->
+            console.error("Topic not found:", topic);
+
+            return;
+
+        }
+
+        popupContent.innerHTML = `
 
             <div class="popup-header">
 
@@ -190,8 +168,6 @@ topicCards.forEach((card) => {
                 <button id="closePopup">✕</button>
 
             </div>
-
-            <!-- Beginner Section -->
 
             <div class="roadmap-box">
 
@@ -223,8 +199,6 @@ topicCards.forEach((card) => {
 
             </div>
 
-            <!-- Intermediate Section -->
-
             <div class="roadmap-box">
 
                 <h3>🟡 Intermediate</h3>
@@ -254,8 +228,6 @@ topicCards.forEach((card) => {
                 </ul>
 
             </div>
-
-            <!-- Advanced Section -->
 
             <div class="roadmap-box">
 
@@ -290,12 +262,11 @@ topicCards.forEach((card) => {
         `;
 
         // Show popup
+
         roadmapPopup.classList.add("active");
 
-
-
         // =============================
-        // Close Popup
+        // Close Popup Button
         // =============================
 
         const closePopup = document.getElementById("closePopup");
@@ -306,31 +277,138 @@ topicCards.forEach((card) => {
 
         });
 
-
-
         // =============================
         // Toggle Solved Problems
         // =============================
 
-        // Select all solve circles
         const solveCircles = document.querySelectorAll(".solve-circle");
 
-        // Loop through circles
         solveCircles.forEach((circle) => {
 
-            // Add click event
-            circle.addEventListener("click", () => {
+        circle.addEventListener("click", (e) => {
 
-                // Select parent problem item
-                const problemItem = circle.closest("li");
+            e.stopPropagation();
 
-                // Toggle solved class
+            const problemItem = circle.closest("li");
+
+            const problemName =
+                problemItem.querySelector("span").textContent;
+
                 problemItem.classList.toggle("solved");
 
+            const isSolved =
+                problemItem.classList.contains("solved");
+
+            localStorage.setItem(
+                problemName,
+                isSolved
+            );
+
+            updateStats();
+
             });
+
+        });
+        document
+        .querySelectorAll(".roadmap-box li")
+        .forEach((item) => {
+
+            const problemName =
+                item.querySelector("span").textContent;
+
+            const solved =
+                localStorage.getItem(problemName);
+
+            if (solved === "true") {
+
+                item.classList.add("solved");
+
+            }
 
         });
 
     });
 
 });
+
+// =============================
+// Close Popup On Background Click
+// =============================
+
+roadmapPopup.addEventListener("click", (e) => {
+
+    if (e.target === roadmapPopup) {
+
+        roadmapPopup.classList.remove("active");
+
+    }
+
+});
+// ====================================
+// Update Dashboard Stats
+// ====================================
+
+function updateStats() {
+
+    // Variable to store total solved count
+    let total = 0;
+
+    // Loop through all localStorage items
+    for(let i = 0; i < localStorage.length; i++) {
+
+        // Get current key name
+        const key = localStorage.key(i);
+
+        // Check if problem is solved
+        if(localStorage.getItem(key) === "true") {
+
+            // Increase solved count
+            total++;
+
+        }
+
+    }
+
+    // Update Total Solved card
+    document.getElementById("totalSolved").textContent = total;
+
+}
+
+
+
+
+
+// ====================================
+// Restore Saved Problems
+// ====================================
+
+// Select all problems in popup
+document
+.querySelectorAll(".roadmap-box li")
+.forEach((item) => {
+
+    // Get problem name
+    const problemName =
+        item.querySelector("span").textContent;
+
+    // Read saved status
+    const solved =
+        localStorage.getItem(problemName);
+
+    // If previously solved
+    if(solved === "true") {
+
+        // Add solved styling
+        item.classList.add("solved");
+
+    }
+
+});
+
+
+// ====================================
+// Load Stats On Page Start
+// ====================================
+
+// Update stats when page loads
+updateStats();
