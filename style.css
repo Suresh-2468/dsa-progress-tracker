@@ -1043,3 +1043,219 @@ footer{
 html{
     scroll-behavior: smooth;
 }
+
+/* ==========================
+   Coding Platforms Section
+========================== */
+
+.platform-cards{
+
+    display: flex;
+
+    gap: 20px;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+}
+
+.platform-link{
+
+    flex: 1;
+
+    text-decoration: none;
+
+    color: inherit;
+
+}
+
+.platform-card{
+
+    background: #151c35;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    height: 100%;
+
+    min-height: 150px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+}
+
+.platform-card:hover{
+
+    transform: translateY(-5px);
+
+}
+
+.platform-card h3{
+
+    margin-bottom: 12px;
+
+}
+
+.platform-card p{
+
+    color: #94a3b8;
+
+}
+
+/* Platform Accent Colors */
+
+.leetcode{
+
+    border-left: 8px solid #cf7e21;
+
+}
+
+.gfg{
+
+    border-left: 8px solid #2f8d46;
+
+}
+
+.hackerrank{
+
+    border-left: 8px solid #3ed877;
+
+}
+
+.codechef{
+
+    border-left: 8px solid #2d1507;
+
+}
+.platform-cards{
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.platform-link{
+
+    flex: 1 1 220px;
+
+}
+/* ==========================
+   Platform Icons
+========================== */
+
+.platform-icon{
+
+    font-size: 2.5rem;
+
+    margin-bottom: 12px;
+
+}
+
+/* ==========================
+   Platform Name Colors
+========================== */
+
+.leetcode-text{
+
+    color: #FFA116;
+
+}
+
+.gfg-text{
+
+    color: #2F8D46;
+
+}
+
+.hackerrank-text{
+
+    color: #2EC866;
+
+}
+
+.codechef-text{
+
+    color: #B58863;
+
+}
+
+/* ==========================
+   Platform Card Styling
+========================== */
+
+.platform-card{
+
+    background: #151c35;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    min-height: 180px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+
+}
+
+.platform-card:hover{
+
+    transform: translateY(-6px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+}
+
+/* Left Accent Borders */
+
+.leetcode{
+
+    border-left: 5px solid #FFA116;
+
+}
+
+.gfg{
+
+    border-left: 5px solid #2F8D46;
+
+}
+
+.hackerrank{
+
+    border-left: 5px solid #2EC866;
+
+}
+
+.codechef{
+
+    border-left: 5px solid #B58863;
+
+}
