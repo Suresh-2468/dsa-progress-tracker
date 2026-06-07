@@ -1,0 +1,370 @@
+/* Sidebar */
+
+.sidebar{
+    width: 250px;
+    background: #151c35;
+    min-height: 100vh;
+}
+
+/* Logo */
+
+.logo{
+    padding: 20px;
+}
+
+/* Navigation */
+
+.nav-links{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Menu Links */
+
+.nav-links a{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 20px;
+
+    text-decoration: none;
+
+    color: white;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover{
+    background: rgba(255,255,255,0.05);
+}
+
+/* Active Menu */
+
+.nav-links a.active{
+    border-left: 4px solid #8b5cf6;
+}
+
+/* Dropdown Menu */
+
+.dropdown-menu{
+    display: none;
+
+    flex-direction: column;
+
+    margin-left: 20px;
+}
+
+.dropdown-menu a{
+    font-size: 0.95rem;
+}
+
+
+
+/* ===================================
+   PLATFORM DASHBOARD
+=================================== */
+
+.platform-dashboard{
+
+    display: grid;
+
+    grid-template-columns: 300px 1fr;
+
+    min-height: 100vh;
+
+}
+
+/* ===================================
+   SIDEBAR
+=================================== */
+
+.platform-sidebar{
+
+    background: #151c35;
+
+    padding: 30px;
+
+    border-right: 1px solid rgba(255,255,255,0.08);
+
+}
+
+.back-btn{
+
+    text-decoration: none;
+
+    color: white;
+
+}
+
+.platform-profile{
+
+    text-align: center;
+
+    margin-top: 30px;
+
+}
+
+.profile-avatar{
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: auto;
+
+}
+
+.profile-avatar i{
+
+    font-size: 3rem;
+
+}
+
+.platform-profile h2{
+
+    margin-top: 15px;
+
+}
+
+.platform-profile p{
+
+    color: #94a3b8;
+
+}
+
+.sidebar-title{
+
+    margin-top: 40px;
+
+    margin-bottom: 20px;
+
+}
+
+/* ===================================
+   PLATFORM LIST
+=================================== */
+
+.platform-list{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.platform-item{
+
+    background: #1c2444;
+
+    padding: 15px;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+.platform-item:hover{
+
+    background: #24315d;
+
+}
+
+.platform-item i{
+
+    margin-right: 10px;
+
+}
+
+.active{
+
+    border-left: 4px solid #8b5cf6;
+
+}
+
+.add-platform{
+
+    border: 2px dashed #60a5fa;
+
+}
+
+/* ===================================
+   RIGHT CONTENT
+=================================== */
+
+.platform-content{
+
+    padding: 40px;
+
+}
+
+/* ===================================
+   TOP STATS
+=================================== */
+
+.stats-row{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(4,1fr);
+
+    gap: 20px;
+
+}
+
+.platform-stat-card{
+
+    background: #151c35;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+}
+
+.platform-stat-card h4{
+
+    color: #94a3b8;
+
+}
+
+.platform-stat-card h2{
+
+    margin-top: 10px;
+
+}
+
+/* ===================================
+   PLATFORM DETAILS
+=================================== */
+
+.platform-details{
+
+    background: #151c35;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+}
+
+.platform-description{
+
+    color: #94a3b8;
+
+    margin-top: 10px;
+
+}
+
+.platform-info{
+
+    margin-top: 20px;
+
+}
+
+.platform-info p{
+
+    margin-top: 10px;
+
+}
+
+/* ===================================
+   PROGRESS
+=================================== */
+
+.progress-section{
+
+    background: #151c35;
+
+    padding: 30px;
+
+    border-radius: 20px;
+
+    margin-top: 25px;
+
+}
+
+.progress-item{
+
+    margin-top: 20px;
+
+}
+
+.progress-bar{
+
+    width: 100%;
+
+    height: 10px;
+
+    background: #1c2444;
+
+    border-radius: 20px;
+
+    margin-top: 8px;
+
+}
+
+.easy-fill{
+
+    width: 60%;
+
+    height: 100%;
+
+    background: #22c55e;
+
+    border-radius: 20px;
+
+}
+
+.medium-fill{
+
+    width: 40%;
+
+    height: 100%;
+
+    background: #f59e0b;
+
+    border-radius: 20px;
+
+}
+
+.hard-fill{
+
+    width: 20%;
+
+    height: 100%;
+
+    background: #ef4444;
+
+    border-radius: 20px;
+
+}
+/* Progress Label */
+
+.progress-label{
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+}

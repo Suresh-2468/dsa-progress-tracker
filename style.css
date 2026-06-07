@@ -1259,3 +1259,231 @@ html{
     border-left: 5px solid #B58863;
 
 }
+/* =====================================
+   Profile Page
+===================================== */
+
+.profile-container{
+
+    max-width: 1100px;
+
+    margin: 40px auto;
+
+    padding: 20px;
+
+}
+
+.back-btn{
+
+    text-decoration: none;
+
+    color: white;
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+
+    font-weight: 500;
+
+}
+
+.back-btn:hover{
+
+    color: #60a5fa;
+
+}
+
+/* =====================================
+   Profile Header
+===================================== */
+
+.profile-header{
+
+    background: #151c35;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+}
+
+.profile-avatar{
+
+    width: 140px;
+
+    height: 140px;
+
+    margin: auto;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1d4ed8
+    );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+.profile-avatar i{
+
+    font-size: 4.5rem;
+
+}
+
+.profile-header h1{
+
+    margin-top: 20px;
+
+    font-size: 2rem;
+
+}
+
+.profile-header p{
+
+    margin-top: 10px;
+
+    color: #94a3b8;
+
+}
+
+/* =====================================
+   Profile Stats
+===================================== */
+
+.profile-stats{
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap: 20px;
+
+    margin-top: 30px;
+
+}
+
+.profile-stat-card{
+
+    background: #151c35;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    transition: 0.3s;
+
+}
+
+.profile-stat-card:hover{
+
+    transform: translateY(-5px);
+
+}
+
+.profile-stat-card h3{
+
+    color: #94a3b8;
+
+}
+
+.profile-stat-card p{
+
+    margin-top: 12px;
+
+    font-size: 2rem;
+
+    font-weight: bold;
+
+}
+
+/* =====================================
+   Information Cards
+===================================== */
+
+.profile-info-card{
+
+    background: #151c35;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+}
+
+.profile-info-card h3{
+
+    margin-bottom: 15px;
+
+}
+
+.platform-stats{
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+.platform-stats p{
+
+    padding: 12px;
+
+    background: rgba(255,255,255,0.05);
+
+    border-radius: 12px;
+
+}
+
+/* Add Platform Card */
+
+.add-platform{
+
+    border: 2px solid #5a128d;
+
+    cursor: pointer;
+
+}
+
+.add-platform i{
+
+    font-size: 3rem;
+
+    color: #60a5fa;
+
+    margin-bottom: 10px;
+
+}
+
+
+.platform-dashboard{
+
+    display:grid;
+
+    grid-template-columns:300px 1fr;
+
+    gap:25px;
+
+}
+
+
+

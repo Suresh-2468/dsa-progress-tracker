@@ -837,40 +837,274 @@ function updateStats() {
 }
 
 
-
-
-
 // ====================================
-// Restore Saved Problems
+// CODING PLATFORMS DATA
+// Stores information of all platforms
 // ====================================
 
-// Select all problems in popup
-document
-.querySelectorAll(".roadmap-box li")
-.forEach((item) => {
+const platformData = {
 
-    // Get problem name
-    const problemName =
-        item.querySelector("span").textContent;
+    // LeetCode Details
+    leetcode: {
 
-    // Read saved status
-    const solved =
-        localStorage.getItem(problemName);
+        name: "LeetCode",
 
-    // If previously solved
-    if(solved === "true") {
+        description:
+        "Interview Preparation Platform",
 
-        // Add solved styling
-        item.classList.add("solved");
+        username:
+        "ArthamSuresh",
+
+        link:
+        "https://leetcode.com",
+
+        total: 95,
+
+        easy: 50,
+
+        medium: 35,
+
+        hard: 10
+
+    },
+
+    // GeeksforGeeks Details
+    gfg: {
+
+        name: "GeeksforGeeks",
+
+        description:
+        "Learning & Articles",
+
+        username:
+        "ArthamSuresh",
+
+        link:
+        "https://www.geeksforgeeks.org",
+
+        total: 42,
+
+        easy: 25,
+
+        medium: 12,
+
+        hard: 5
+
+    },
+
+    // HackerRank Details
+    hackerrank: {
+
+        name: "HackerRank",
+
+        description:
+        "Assessments & Practice",
+
+        username:
+        "ArthamSuresh",
+
+        link:
+        "https://www.hackerrank.com",
+
+        total: 20,
+
+        easy: 12,
+
+        medium: 6,
+
+        hard: 2
+
+    },
+
+    // CodeChef Details
+    codechef: {
+
+        name: "CodeChef",
+
+        description:
+        "Competitive Programming",
+
+        username:
+        "ArthamSuresh",
+
+        link:
+        "https://www.codechef.com",
+
+        total: 19,
+
+        easy: 10,
+
+        medium: 6,
+
+        hard: 3
 
     }
 
-});
+};
 
 
 // ====================================
-// Load Stats On Page Start
+// CODING PLATFORM SWITCHING
+// Runs only on coding-platforms.html
 // ====================================
 
-// Update stats when page loads
-updateStats();
+const platformItems =
+document.querySelectorAll(".platform-item");
+
+
+// Check if platform page exists
+
+if(platformItems.length > 0){
+
+    // Loop through all platform buttons
+
+    platformItems.forEach(item => {
+
+        item.addEventListener("click", () => {
+
+            // Get platform key
+            // Example:
+            // leetcode, gfg, hackerrank
+
+            const key =
+            item.dataset.platform;
+
+            // Ignore Add Platform card
+
+            if(!platformData[key]) return;
+
+            // Remove active class
+            // from all platform buttons
+
+            platformItems.forEach(el => {
+
+                el.classList.remove("active");
+
+            });
+
+            // Add active class
+            // to selected platform
+
+            item.classList.add("active");
+
+            // Get selected platform data
+
+            const platform =
+            platformData[key];
+
+            // ============================
+            // Update Platform Title
+            // ============================
+
+            document.getElementById(
+                "platformName"
+            ).textContent =
+            platform.name;
+
+            
+
+            // ============================
+            // Update Description
+            // ============================
+
+            document.getElementById(
+                "platformDescription"
+            ).textContent =
+            platform.description;
+
+            // ============================
+            // Update Username
+            // ============================
+
+            document.getElementById(
+                "platformUsername"
+            ).textContent =
+            platform.username;
+
+            // ============================
+            // Update Profile Link
+            // ============================
+
+            document.getElementById(
+                "platformLink"
+            ).href =
+            platform.link;
+
+            // ============================
+            // Update Statistics
+            // ============================
+
+            document.getElementById(
+                "totalProblems"
+            ).textContent =
+            platform.total;
+
+            document.getElementById(
+                "easyProblems"
+            ).textContent =
+            platform.easy;
+
+            document.getElementById(
+                "mediumProblems"
+            ).textContent =
+            platform.medium;
+
+            document.getElementById(
+                "hardProblems"
+            ).textContent =
+            platform.hard;
+
+            // ============================
+            // Update Progress Bars
+            // ============================
+
+            const easyPercent =
+            Math.round(
+            (platform.easy / platform.total) * 100
+            );
+
+            const mediumPercent =
+            Math.round(
+            (platform.medium / platform.total) * 100
+            );
+
+            const hardPercent =
+            Math.round(
+            (platform.hard / platform.total) * 100
+            );
+
+            document.getElementById(
+                "easyPercent"
+            ).textContent =
+            easyPercent + "%";
+
+            document.getElementById(
+                "mediumPercent"
+            ).textContent =
+            mediumPercent + "%";
+
+            document.getElementById(
+                "hardPercent"
+            ).textContent =
+            hardPercent + "%";
+
+            document.getElementById(
+                "easyFill"
+            ).style.width =
+            easyPercent + "%";
+
+            document.getElementById(
+                "mediumFill"
+            ).style.width =
+            mediumPercent + "%";
+
+            document.getElementById(
+                "hardFill"
+            ).style.width =
+            hardPercent + "%";
+
+        });
+
+    });
+
+}

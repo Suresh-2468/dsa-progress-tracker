@@ -1,0 +1,325 @@
+html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Coding Platforms</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="platform-dashboard">
+
+        <!-- LEFT SIDEBAR -->
+
+        <div class="platform-sidebar">
+
+            <a href="index.html" class="back-btn">
+
+                <i class="ri-arrow-left-line"></i>
+
+                Back
+
+            </a>
+
+            <!-- Profile -->
+
+            <div class="platform-profile">
+
+                <div class="profile-avatar">
+
+                    <i class="ri-user-3-fill"></i>
+
+                </div>
+
+                <h2>Suresh</h2>
+
+                <p>DSA Learner</p>
+
+            </div>
+
+            <!-- Platforms -->
+
+            <h3 class="sidebar-title">
+
+                Platforms
+
+            </h3>
+
+            <div class="platform-list">
+
+                <div class="platform-item active"
+                     data-platform="leetcode">
+
+                    <i class="ri-code-box-line"></i>
+
+                    LeetCode
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="gfg">
+
+                    <i class="ri-book-open-line"></i>
+
+                    GeeksforGeeks
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="hackerrank">
+
+                    <i class="ri-terminal-box-line"></i>
+
+                    HackerRank
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="codechef">
+
+                    <i class="ri-restaurant-line"></i>
+
+                    CodeChef
+
+                </div>
+
+                <div class="platform-item add-platform">
+
+                    <i class="ri-add-line"></i>
+
+                    Add Platform
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT CONTENT -->
+
+        <div class="platform-content">
+
+    <!-- =========================
+         PLATFORM HEADER
+    ========================== -->
+
+    <div class="platform-details">
+
+        <h1 id="platformName">
+
+            LeetCode
+
+        </h1>
+
+        <p class="platform-description"
+           id="platformDescription">
+
+            Interview Preparation Platform
+
+        </p>
+
+        <div class="platform-info">
+
+            <p>
+
+                <strong>Username:</strong>
+
+                <span id="platformUsername">
+
+                    ArthamSuresh
+
+                </span>
+
+            </p>
+
+            <p>
+
+                <strong>Profile Link:</strong>
+
+                <a id="platformLink"
+                   href="https://leetcode.com"
+                   target="_blank">
+
+                    Visit Profile
+
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         PLATFORM STATS
+    ========================== -->
+
+    <div class="stats-row">
+
+        <div class="platform-stat-card">
+
+            <h4>Total Problems</h4>
+
+            <h2 id="totalProblems">
+
+                95
+
+            </h2>
+
+        </div>
+
+        <div class="platform-stat-card">
+
+            <h4>Easy</h4>
+
+            <h2 id="easyProblems">
+
+                50
+
+            </h2>
+
+        </div>
+
+        <div class="platform-stat-card">
+
+            <h4>Medium</h4>
+
+            <h2 id="mediumProblems">
+
+                35
+
+            </h2>
+
+        </div>
+
+        <div class="platform-stat-card">
+
+            <h4>Hard</h4>
+
+            <h2 id="hardProblems">
+
+                10
+
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+        PROBLEM DISTRIBUTION
+    ========================= -->
+
+    <div class="progress-section">
+
+        <h2>
+
+            Problem Distribution
+
+        </h2>
+
+        <!-- Easy -->
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+
+                <span>Easy</span>
+
+                <span id="easyPercent">
+
+                    53%
+
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="easy-fill"
+                    id="easyFill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Medium -->
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+
+                <span>Medium</span>
+
+                <span id="mediumPercent">
+
+                    37%
+
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="medium-fill"
+                    id="mediumFill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Hard -->
+
+        <div class="progress-item">
+
+            <div class="progress-label">
+
+                <span>Hard</span>
+
+                <span id="hardPercent">
+
+                    10%
+
+                </span>
+
+            </div>
+
+            <div class="progress-bar">
+
+                <div class="hard-fill"
+                    id="hardFill">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
