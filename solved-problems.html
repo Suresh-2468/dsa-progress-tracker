@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Solved Problems</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dropdown.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="platform-dashboard">
+
+        <!-- =========================
+             LEFT SIDEBAR
+        ========================== -->
+
+        <div class="platform-sidebar">
+
+            <a href="index.html"
+               class="back-btn">
+
+                <i class="ri-arrow-left-line"></i>
+
+                Back
+
+            </a>
+
+            <h2 class="sidebar-title">
+
+                Solved Platforms
+
+            </h2>
+
+            <div class="platform-list">
+
+                <div class="platform-item active"
+                     data-platform="leetcode">
+
+                    🟠 LeetCode
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="gfg">
+
+                    🟢 GeeksforGeeks
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="hackerrank">
+
+                    🟩 HackerRank
+
+                </div>
+
+                <div class="platform-item"
+                     data-platform="codechef">
+
+                    🟤 CodeChef
+
+                </div>
+
+            </div>
+
+        </div>
+
+<!-- =========================
+     RIGHT CONTENT
+========================= -->
+
+<div class="platform-content">
+
+    <!-- Page Title -->
+
+    <div class="platform-details">
+
+        <h1 id="platformName">
+
+            LeetCode Solved Problems
+
+        </h1>
+
+        <p id="platformDescription">
+
+            Problems solved on LeetCode
+
+        </p>
+
+    </div>
+
+    <!-- =========================
+         STATS CARD
+    ========================== -->
+
+    <div class="stats-row">
+
+        <div class="platform-stat-card">
+
+            <h4>Total Solved</h4>
+
+            <h2 id="solvedCount">
+
+                0
+
+            </h2>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         SEARCH BAR
+    ========================== -->
+
+    <input type="text"
+           id="searchSolved"
+           placeholder="Search Problem...">
+
+    <!-- =========================
+         PROBLEM LIST
+    ========================== -->
+
+    <ul id="solvedList">
+
+    </ul>
+
+</div>
+    <script src="SolvedProblems.js"></script>
+    <script src="script.js"></script>
+    
+
+</body>
+
+</html>

@@ -14,6 +14,8 @@ if (profileDropdown) {
 
 }
 
+
+
 // =============================
 // Select Elements
 // =============================
@@ -750,19 +752,7 @@ topicCards.forEach((card) => {
 
 });
 
-// =============================
-// Close Popup On Background Click
-// =============================
 
-roadmapPopup.addEventListener("click", (e) => {
-
-    if (e.target === roadmapPopup) {
-
-        roadmapPopup.classList.remove("active");
-
-    }
-
-});
 
 
 // ====================================
@@ -954,13 +944,14 @@ document.querySelectorAll(".platform-item");
 
 // Check if platform page exists
 
-if(platformItems.length > 0){
+if(platformItems.length > 0 ){
 
     // Loop through all platform buttons
 
     platformItems.forEach(item => {
 
         item.addEventListener("click", () => {
+            
 
             // Get platform key
             // Example:
