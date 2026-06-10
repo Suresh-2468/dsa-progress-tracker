@@ -1477,11 +1477,39 @@ html{
 
 .platform-dashboard{
 
-    display:grid;
+    display: flex;
 
-    grid-template-columns:300px 1fr;
+    height: 100vh;
 
-    gap:25px;
+}
+
+.platform-sidebar{
+
+    width: 280px;
+
+    overflow-y: auto;
+
+}
+
+.platform-content{
+
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 30px;
+
+}
+
+.platform-sidebar{
+
+    position: sticky;
+
+    top: 0;
+
+    height: 100vh;
+
+    overflow-y: auto;
 
 }
 
